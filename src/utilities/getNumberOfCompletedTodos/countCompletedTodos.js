@@ -1,5 +1,5 @@
 export function countCompletedTodos(todos) {
-  return todos.reduce((result, todo) => {
+  return todos.reduce((numberOfCompletedTodos, todo) => {
     if (todo.completed) {
       return numberOfCompletedTodos + 1;
     }
