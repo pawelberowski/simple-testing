@@ -29,8 +29,10 @@ describe('The getBMI function', () => {
   });
   describe('When not provided with two numbers', () => {
     it('should return please provide weight as a number of kilograms and height as a number in meters', () => {
-      const result = getBMI(NaN, "12");
-      expect(result).toBe('please provide weight as a number of kilograms and height as a number in meters')
+      const result = getBMI(NaN, '12');
+      expect(result).toBe(
+        'please provide weight as a number of kilograms and height as a number in meters',
+      );
     });
-  })
+  });
 });
