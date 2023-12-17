@@ -1,3 +1,3 @@
-export function shouldSetAlarm(isEmployed, isOnVacation) {
+export function shouldSetAlarm({ isEmployed, isOnVacation }) {
   return isEmployed && !isOnVacation;
 }
