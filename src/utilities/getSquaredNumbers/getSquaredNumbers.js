@@ -1,3 +1,3 @@
-export function getSquaredNumbers(Numbers) {
-  return Numbers.map((number) => number * number);
+export function getSquaredNumbers(numbers) {
+  return numbers.map((number) => number * number);
 }
