@@ -1,8 +1,8 @@
 import { shouldSetAlarm } from './shouldSetAlarm';
 
 describe('The shouldSetAlarm function', () => {
-  describe('when isEmployed parameter is set to true', () => {
-    describe('and when isOnVacation parameter is set to false', () => {
+  describe('when the isEmployed parameter is set to true', () => {
+    describe('and when the isOnVacation parameter is set to false', () => {
       it('should return true', () => {
         const result = shouldSetAlarm({
           isEmployed: true,
@@ -11,7 +11,7 @@ describe('The shouldSetAlarm function', () => {
         expect(result).toBe(true);
       });
     });
-    describe('and when isOnVacation parameter is set to true', () => {
+    describe('and when the isOnVacation parameter is set to true', () => {
       it('should return false', () => {
         const result = shouldSetAlarm({
           isEmployed: true,
@@ -21,8 +21,8 @@ describe('The shouldSetAlarm function', () => {
       });
     });
   });
-  describe('when isEmployed parameter is set to false', () => {
-    describe('and when isOnVacation parameter is set to false', () => {
+  describe('when the isEmployed parameter is set to false', () => {
+    describe('and when the isOnVacation parameter is set to false', () => {
       it('should return true', () => {
         const result = shouldSetAlarm({
           isEmployed: false,
@@ -31,7 +31,7 @@ describe('The shouldSetAlarm function', () => {
         expect(result).toBe(false);
       });
     });
-    describe('and when isOnVacation parameter is set to true', () => {
+    describe('and when the isOnVacation parameter is set to true', () => {
       it('should return false', () => {
         const result = shouldSetAlarm({
           isEmployed: false,
