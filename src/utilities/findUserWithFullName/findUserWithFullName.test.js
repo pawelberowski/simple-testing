@@ -17,17 +17,16 @@ describe('The findUserWithFullName function', () => {
         },
       ];
     });
-    describe('when provided with a valid full name', () => {
+    describe('and when provided with a valid full name', () => {
       it('should return the user object', () => {
         const kate = findUserWithFullName(usersArray, 'Kate Williams');
         expect(kate.heightInCm).toBe(169);
       });
     });
-    describe('when provided with an invalid full name', () => {
-      it('should return user not found', () => {
+    describe('and when provided with an invalid full name', () => {
+      it('should return undefined', () => {
         const mike = findUserWithFullName(usersArray, 'Mike Williams');
-        expect(mike).toBe('User not found');
-        expect(mike.heightInCm).toEqual(undefined);
+        expect(mike).toBe(undefined);
       });
     });
   });
