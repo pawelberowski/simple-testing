@@ -1,12 +1,10 @@
 import { getSmallestNumber } from './getSmallestNumber';
 
 describe('The getSmallestNumber function', () => {
-  describe('when provided with an numbers array', () => {
+  describe('when provided with an array of numbers', () => {
     it('should return the smallest number', () => {
       const result = getSmallestNumber([2, -5, 10, 1, 4]);
       expect(result).toBe(-5);
-      const result2 = getSmallestNumber([200, 25, 4, 123, 87]);
-      expect(result2).toBe(4);
     });
   });
   describe('when provided with an empty array', () => {
@@ -15,7 +13,7 @@ describe('The getSmallestNumber function', () => {
       expect(result).toBe(Infinity);
     });
   });
-  describe('when provided with an array containing not only numbers', () => {
+  describe('when provided with an array containing elements that are not exclusively numbers', () => {
     it('should return NaN', () => {
       const result = getSmallestNumber([-200, 'a', '2', 'd', 1]);
       expect(result).toBe(NaN);

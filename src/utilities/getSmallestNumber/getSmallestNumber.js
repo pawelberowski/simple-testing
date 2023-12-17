@@ -1,3 +1,3 @@
-export function getSmallestNumber(Numbers) {
-  return Math.min(...Numbers);
+export function getSmallestNumber(numbers) {
+  return Math.min(...numbers);
 }
