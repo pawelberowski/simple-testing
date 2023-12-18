@@ -67,6 +67,11 @@ describe('The function getUsersWithPosts function', () => {
           },
         ]);
       });
+      it('should call both the getUsers and the getPosts functions', async() => {
+        await getUsersWithPosts();
+        expect(getUsers).toHaveBeenCalled();
+        expect(getPosts).toHaveBeenCalled();
+      });
       it('should return an array of users with their posts', async () => {
         const result = await getUsersWithPosts();
 
@@ -88,12 +93,5 @@ describe('The function getUsersWithPosts function', () => {
         expect(result[1].name).toBe('Ervin Howell');
       });
     });
-  });
-});
-describe('The function getUsersWithPosts function', () => {
-  it('should call both the getUsers and the getPosts functions', () => {
-    getUsersWithPosts();
-    expect(getUsers).toHaveBeenCalled();
-    expect(getPosts).toHaveBeenCalled();
   });
 });
