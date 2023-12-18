@@ -90,3 +90,10 @@ describe('The function getUsersWithPosts function', () => {
     });
   });
 });
+describe('The function getUsersWithPosts function', () => {
+  it('should call both the getUsers and the getPosts functions', () => {
+    getUsersWithPosts();
+    expect(getUsers).toHaveBeenCalled();
+    expect(getPosts).toHaveBeenCalled();
+  });
+});
