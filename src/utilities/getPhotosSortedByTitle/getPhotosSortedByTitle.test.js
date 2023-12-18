@@ -8,6 +8,10 @@ jest.mock('./getPhotos', () => {
 });
 
 describe('The function getPhotosSortedByTitle', () => {
+  it('should call the getPhotos function', () => {
+    getPhotosSortedByTitle();
+    expect(getPhotos).toHaveBeenCalled();
+  });
   describe('when the getPhotos responds with an array of photos', () => {
     beforeEach(() => {
       getPhotos.mockResolvedValue([
@@ -62,11 +66,5 @@ describe('The function getPhotosSortedByTitle', () => {
       const result = await getPhotosSortedByTitle();
       expect(result).toEqual([]);
     });
-  });
-});
-describe('The getPhotosSortedByTitle function', () => {
-  it('should call the getPhotos function', () => {
-    getPhotosSortedByTitle();
-    expect(getPhotos).toHaveBeenCalled();
   });
 });
