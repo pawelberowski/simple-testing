@@ -67,7 +67,7 @@ describe('The function getUsersWithPosts function', () => {
           },
         ]);
       });
-      it('should call both the getUsers and the getPosts functions', async() => {
+      it('should call both the getUsers and the getPosts functions', async () => {
         await getUsersWithPosts();
         expect(getUsers).toHaveBeenCalled();
         expect(getPosts).toHaveBeenCalled();
