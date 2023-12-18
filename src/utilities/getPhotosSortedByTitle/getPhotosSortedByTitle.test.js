@@ -65,8 +65,8 @@ describe('The function getPhotosSortedByTitle', () => {
   });
 });
 describe('The getPhotosSortedByTitle function', () => {
-  it('should call the getUsers function', () => {
+  it('should call the getPhotos function', () => {
     getPhotosSortedByTitle();
-    expect(getPhotos()).toHaveBeenCalled();
+    expect(getPhotos).toHaveBeenCalled();
   });
 });
