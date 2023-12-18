@@ -45,3 +45,9 @@ describe('The function getUsersSortedByName', () => {
     });
   });
 });
+describe('The getUsersSortedByName function', () => {
+  it('should call the getUsers function', () => {
+    getUsersSortedByName();
+    expect(getUsers).toHaveBeenCalled();
+  });
+});

@@ -51,3 +51,9 @@ describe('The getPostsSortedByTitle function', () => {
     });
   });
 });
+describe('The getPostsSortedByTitle function', () => {
+  it('should call the getPosts function', () => {
+    getPostsSortedByTitle();
+    expect(getPosts).toHaveBeenCalled();
+  });
+});
