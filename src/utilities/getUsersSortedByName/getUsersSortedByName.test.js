@@ -37,11 +37,11 @@ describe('The function getUsersSortedByName', () => {
     beforeEach(() => {
       getUsers.mockImplementation(() => {
         throw new Error();
-      })
-    })
+      });
+    });
     it('should return an empty array', async () => {
       const result = await getUsersSortedByName();
       expect(result).toEqual([]);
-    })
-  })
+    });
+  });
 });
