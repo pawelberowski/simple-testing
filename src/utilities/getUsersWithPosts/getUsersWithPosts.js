@@ -3,8 +3,7 @@ import { getPosts } from '../getPostsSortedByTitle/getPosts';
 
 export async function getUsersWithPosts() {
   try {
-    const users = await getUsers();
-    const posts = await getPosts();
+    const [users, posts] = await Promise.all([getUsers(), getPosts()]);
 
     return users.map((user) => ({
       ...user,
