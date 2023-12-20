@@ -75,22 +75,56 @@ describe('The function getUsersWithPosts function', () => {
       it('should return an array of users with their posts', async () => {
         const result = await getUsersWithPosts();
 
-        expect(result[0].posts).toEqual([
+        expect(result).toEqual([
           {
-            userId: 1,
             id: 1,
-            title: 'Hello world 1',
-            body: 'Lorem Ipsum',
+            name: 'Leanne Graham',
+            username: 'Bret',
+            email: 'Sincere@april.biz',
+            posts: [
+              {
+                userId: 1,
+                id: 1,
+                title: 'Hello world 1',
+                body: 'Lorem Ipsum',
+              },
+              {
+                userId: 1,
+                id: 2,
+                title: 'Hello world 2',
+                body: 'Lorem Ipsum 2',
+              },
+            ],
           },
           {
-            userId: 1,
             id: 2,
-            title: 'Hello world 2',
-            body: 'Lorem Ipsum 2',
+            name: 'Ervin Howell',
+            username: 'Antonette',
+            email: 'Shanna@melissa.tv',
+            posts: [
+              {
+                userId: 2,
+                id: 3,
+                title: 'Hello world 3',
+                body: 'Lorem Ipsum 3',
+              },
+            ],
+          },
+          {
+            id: 3,
+            name: 'Clementine Bauch',
+            username: 'Samantha',
+            email: 'Nathan@yesenia.net',
+            posts: [
+              {
+                userId: 3,
+                id: 4,
+                title: 'Hello world 4',
+                body: 'Lorem Ipsum 4',
+              },
+            ],
           },
         ]);
-        expect(result[2].posts[0].title).toBe('Hello world 4');
-        expect(result[1].name).toBe('Ervin Howell');
       });
     });
   });
