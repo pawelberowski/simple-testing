@@ -1,6 +1,5 @@
 export function isPalindrome(text) {
-  return (
-    text.toLowerCase().replaceAll(' ', '') ===
-    text.toLowerCase().replaceAll(' ', '').split('').reverse().join('')
-  );
+  const cleanText = text.toLowerCase().replaceAll(' ', '');
+  const reversedCleanText = cleanText.split('').reverse().join('');
+  return cleanText === reversedCleanText;
 }
